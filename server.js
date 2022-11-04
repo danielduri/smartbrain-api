@@ -30,6 +30,7 @@ app.get('/', (req, res) => {
 })
 */
 
+app.get('/', (req, res) => {res.send('Server is up')})
 app.post('/signIn', (req, res) => {handleSignIn(req, res, db, bcrypt)})
 app.post("/register", (req, res) => {handleRegister(req, res, db, bcrypt)});
 app.get('/profile/:id', (req, res) => {handleProfileGet(req, res, db)} )
